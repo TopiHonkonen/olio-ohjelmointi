@@ -7,7 +7,7 @@ using namespace std;
 
 Chef::Chef(string chefName) {
 	name=chefName;
-	cout<<"Chef "<<name<<" konstruktori";
+	cout<<"Chef "<<name<<" konstruktori\n";
 }
 
 void Chef::makeSalad() {
@@ -18,9 +18,11 @@ void Chef::makeSoup() {
 	cout<<"Chef "<<name<<" makes soup\n";
 }
 
-ItalianChef::ItalianChef(string chefName) : Chef(chefName) {
+ItalianChef::ItalianChef(string chefName, int v, int j) : Chef(chefName) {
 	name=chefName;
-	cout<<"Chef "<<name<<" konstruktori";
+	vesi=v;
+	jauhot=j;
+	cout<<"Chef "<<name<<" konstruktori\n";
 }
 
 string ItalianChef::getName() {
@@ -28,5 +30,7 @@ string ItalianChef::getName() {
 }
 
 void ItalianChef::makePasta() {
-	cout<<"Chef "<<name<<" makes pasta\n";
+	cout<<"Chef "<<name<<" makes pasta with secret recipe\n";
+	cout<<"Chef "<<name<<" uses "<<vesi<<" water\n";
+	cout<<"Chef "<<name<<" uses "<<jauhot<<" flour\n";
 }

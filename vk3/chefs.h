@@ -16,8 +16,10 @@ class Chef {
 
 class ItalianChef:public Chef {
 	public:
-		ItalianChef(string chefName);
+		ItalianChef(string chefName, int v, int j);
 		string getName();
 		void makePasta();
+	private:
+		int vesi, jauhot;
 };
 #endif
