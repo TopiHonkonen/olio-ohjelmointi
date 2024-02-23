@@ -17,7 +17,31 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_N1_clicked();
+    void on_N2_clicked();
+    void on_N3_clicked();
+    void on_N4_clicked();
+    void on_N5_clicked();
+    void on_N6_clicked();
+    void on_N7_clicked();
+    void on_N8_clicked();
+    void on_N9_clicked();
+    void on_N0_clicked();
+
+    void on_add_clicked();
+    void on_sub_clicked();
+    void on_mul_clicked();
+    void on_div_clicked();
+
+    void on_enter_clicked();
+    void on_clear_clicked();
+
 private:
+    QString number1, number2;
+    int operand, state;
     Ui::MainWindow *ui;
+    void numberClickedHandler();
+
 };
 #endif // MAINWINDOW_H
